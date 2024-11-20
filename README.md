@@ -1,3 +1,51 @@
+# maplibre-gl-visibility
+
+maplibre-gl-visibilityは、[maplibre-gl-opacity](https://github.com/mug-jp/maplibre-gl-opacity)に[map-gl-utils](https://github.com/stevage/map-gl-utils)を適用して、複数のレイヤーの表示/非表示を一括で切り替えられるようにしたMapLibre GL JSのプラグインです。
+
+### 例
+
+```html
+<link rel="stylesheet" href="./maplibre-gl-visibility.css">
+```
+
+```javascript
+// module import
+import VisibilityControl from './maplibre-gl-visibility.js';
+
+// VisibilityControlのオプション
+
+// 背景レイヤ設定では、Sourceのidを指定します。
+    const mapBaseLayer = {
+        SourceId1: 'Display Label 1',
+        SourceId2: 'Display Label 2'
+    };
+
+// オーバーレイヤ設定はMapオブジェクトで、key[1]にfalsyでない値があれば初期チェック状態になります。
+// valueには配列でレイヤを列挙できます。
+    const mapOverLayer = new Map([
+        [["Display Label 3", "+"], "layerId1"],
+        [["Display Label 4"], ["layerId2", "layerId3"]]
+    ]);
+
+// VisibilityControl
+let Visibility = new VisibilityControl({
+    baseLayers: mapBaseLayer,
+    overLayers: mapOverLayer,
+// 透過度スライドバー表示/非表示設定 (trueまたはfalse)
+    opacityControl: true,
+});
+map.addControl(Visibility, 'top-right');
+
+```
+
+以下、オリジナルのmaplibre-gl-opacityのREADMEです。
+
+<br>
+
+---
+
+<br>
+
 # maplibre-gl-opacity
 
 maplibre-gl-opacity is a MapLibre GL JS plugin that makes multiple tile layers transparent.

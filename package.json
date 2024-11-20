@@ -1,32 +1,35 @@
 {
-  "name": "maplibre-gl-opacity",
-  "version": "1.7.0",
-  "description": "maplibre-gl-opacity is a MapLibre GL JS plugin that makes multiple tile layers transparent.",
-  "main": "dist/maplibre-gl-opacity.js",
+  "name": "maplibre-gl-visibility",
+  "version": "0.1.0",
+  "description": "maplibre-gl-visibility is a MapLibre GL JS plugin that switchs multiple layers show/hide.",
+  "main": "dist/maplibre-gl-visibility.js",
   "types": "./index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dayjournal/maplibre-gl-opacity.git"
+    "url": "git+https://github.com/Settsu-City-Planning/maplibre-gl-visibility.git"
   },
   "keywords": [
     "MapLibre GL JS",
     "LayerControl",
-    "Opacity",
-    "tile",
+    "visibility",
+    "vector",
     "plugin"
   ],
-  "author": "Yasunori Kirimoto",
+  "author": "Settsu City",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dayjournal/maplibre-gl-opacity/issues"
+    "url": "https://github.com/Settsu-City-Planning/maplibre-gl-visibility/issues"
   },
-  "homepage": "https://github.com/dayjournal/maplibre-gl-opacity#readme",
+  "homepage": "https://github.com/Settsu-City-Planning/maplibre-gl-visibility#readme",
   "scripts": {
-    "minify:js": "terser src/maplibre-gl-opacity.js -o dist/maplibre-gl-opacity.js",
-    "minify:css": "cleancss src/maplibre-gl-opacity.css -o dist/maplibre-gl-opacity.css"
+    "minify:js": "terser src/maplibre-gl-visibility.js -o dist/maplibre-gl-visibility.js",
+    "minify:css": "cleancss src/maplibre-gl-visibility.css -o dist/maplibre-gl-visibility.css"
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.2",
     "terser": "^5.21.0"
+  },
+  "dependencies": {
+    "map-gl-utils": "^0.44.3"
   }
 }

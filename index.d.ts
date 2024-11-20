@@ -1,13 +1,13 @@
 import type { IControl, Map } from 'maplibre-gl';
 
-type OpacityControlOption = {
+type VisibilityControlOption = {
   baseLayers: Record<string, string>,
-  overLayers: Record<string, string>,
+  overLayers: any,
   opacityControl: boolean,
 }
 
-export default class OpacityControl implements IControl {
-  constructor(options: Partial<OpacityControlOption>);
+export default class VisibilityControl implements IControl {
+  constructor(options: Partial<VisibilityControlOption>);
   onAdd(map: Map): HTMLElement;
   onRemove(): void;
 }
