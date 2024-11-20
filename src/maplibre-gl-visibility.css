@@ -1,21 +1,21 @@
 /*コントロール全体設定*/
-#opacity-control {
+#visibility-control {
     width: 150px;
     padding: 10px 0px 10px 10px;
 }
-#opacity-control hr {
+#visibility-control hr {
     margin: 5px 10px 5px 0px;
 }
 /*チェックボックス設定*/
-#opacity-control input[type='checkbox'] {
+#visibility-control input[type='checkbox'] {
     margin-right: 5px;
 }
 /*ラジオボタン設定*/
-#opacity-control input[type='radio'] {
+#visibility-control input[type='radio'] {
     margin-right: 5px;
 }
 /* スライドバー設定 */
-#opacity-control input[type='range'] {
+#visibility-control input[type='range'] {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     width: 125px;
@@ -27,19 +27,19 @@
     background: #f1f0ee;
     outline: none;
 }
-#opacity-control input[type='range']::-ms-track {
+#visibility-control input[type='range']::-ms-track {
     border: inherit;
     color: transparent;
     background: transparent;
 }
-#opacity-control input[type='range']::-ms-fill-lower,
-#opacity-control input[type='range']::-ms-fill-upper {
+#visibility-control input[type='range']::-ms-fill-lower,
+#visibility-control input[type='range']::-ms-fill-upper {
     background: transparent;
 }
-#opacity-control input[type='range']::-ms-tooltip {
+#visibility-control input[type='range']::-ms-tooltip {
     display: none;
 }
-#opacity-control input[type='range']::-ms-thumb {
+#visibility-control input[type='range']::-ms-thumb {
     width: 15px;
     height: 18px;
     border-radius: 12px;
