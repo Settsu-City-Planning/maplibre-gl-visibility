@@ -141,6 +141,7 @@ class VisibilityControl {
     }
 
     onAdd(map) {
+        U.init(map)
         this.#map = map;
         // コントロール作成
         this.#visibilityControlAdd();
